@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  div
+    each cat in cats
+      div(value=cat) #{cat.name} is #{cat.age} years old and proudly wears&nbsp;
+        each color in cat.colors
+          span #{color},
